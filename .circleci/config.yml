@@ -1,7 +1,7 @@
 version: 2
 
 defaults: &defaults
-    working_directory: ~/npm-go-textile-dep
+    working_directory: ~/npm-go-textile
     docker:
         - image: node:10.13.0
 
@@ -48,10 +48,10 @@ jobs:
                 key: node-v1-{{ checksum "package.json" }}-{{ arch }}
             - run: npm install
             - attach_workspace:
-                at: ~/npm-go-textile-dep
+                at: ~/npm-go-textile
             - run:
                 name: Authenticate with registry
-                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/npm-go-textile-dep/.npmrc
+                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/npm-go-textile/.npmrc
             - run:
                 name: Publish package
                 command: npm publish --access=public --unsafe-perm
