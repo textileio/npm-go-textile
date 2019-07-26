@@ -17,10 +17,10 @@
     "prepare": "npm run build",
     "install": "npm run build && npm run link",
     "test": "jest --no-watchman --config jest.config.json",
-    "lint": "npx eslint --fix --ext .mjs,.js,.jsx,.ts,.tsx src && echo 'Lint complete.'",
-    "precommit": "npx lint && npx test",
-    "preversion": "npx precommit",
-    "release": "npx version --patch",
+    "lint": "eslint --fix --ext .mjs,.js,.jsx,.ts,.tsx src && echo 'Lint complete.'",
+    "precommit": "npm run lint && npm run test",
+    "preversion": "npm run precommit",
+    "release": "npm version patch",
     "postversion": "git push --follow-tags"
   },
   "engines": {
