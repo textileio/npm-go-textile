@@ -1,6 +1,6 @@
 {
   "name": "@textile/go-textile",
-  "version": "0.6.5",
+  "version": "0.6.3",
   "description": "Textile binary installation module for Node",
   "main": "dist/index.js",
   "bin": {
@@ -42,7 +42,7 @@
   "author": "textile.io",
   "license": "MIT",
   "dependencies": {
-    "@textile/go-textile-dep": "0.6.3",
+    "@textile/go-textile-dep": "0.6.4",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
