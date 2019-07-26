@@ -42,7 +42,7 @@
   "author": "textile.io",
   "license": "MIT",
   "dependencies": {
-    "@textile/go-textile-dep": "0.6.4",
+    "@textile/go-textile-dep": "0.6.5",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
