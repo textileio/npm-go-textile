@@ -12,6 +12,11 @@ depPath = path.dirname(path.dirname(depPath)) // walk up ../../
 var depBin = path.join(depPath, 'binary', 'textile')
 var localBin = path.join(__dirname, '..', 'bin', 'textile')
 
+function die(err: string) {
+  console.error(err)
+  process.exit(1)
+}
+
 if (isWin) {
   depBin += '.exe'
   localBin += '.exe'
@@ -50,9 +55,4 @@ var actualVersion = m ? m[1] : undefined
 
 if (actualVersion !== version) {
   die('version mismatch: expected ' + version + ' got ' + actualVersion)
-}
-
-function die(err: string) {
-  console.error(err)
-  process.exit(1)
 }
