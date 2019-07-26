@@ -60,17 +60,17 @@ textile version
 
 ```sh
 # Run all the unit tests
-yarn test
+npm run test
 
 # Lint everything
 # NOTE: Linting uses `prettier` to auto-fix styling issues when possible
-yarn lint
+npm run lint
 ```
 
 You can also compile the Typescript yourself with:
 
 ```sh
-yarn build
+npm run build
 ```
 
 If you want to push out a _new_ release, simply 'bump' the `npm-go-textile-dep` version in `package.json` and run `npm version {path|minor|major}` to run the CI-based release process.
