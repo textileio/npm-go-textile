@@ -4,11 +4,11 @@ const textile = path.join(__dirname, '..', '..', 'bin', 'textile')
 import execa from 'execa'
 
 describe('npm-go-textile', () => {
-  it('ensure ipfs bin path exists', async () => {
+  it('ensure textile bin path exists', async () => {
     await fs.stat(textile)
     const res = execa.sync(textile, ['version'], {
       cwd: path.join(__dirname),
     })
-    expect(res.stdout).toMatch('textile version')
+    expect(res.stdout).toMatch('go-textile version')
   })
 })
