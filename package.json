@@ -1,6 +1,6 @@
 {
   "name": "@textile/go-textile",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Textile binary installation module for Node",
   "main": "dist/index.js",
   "bin": {
