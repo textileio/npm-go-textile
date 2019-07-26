@@ -19,7 +19,6 @@
     "test": "jest --no-watchman --config jest.config.json",
     "lint": "eslint --fix --ext .mjs,.js,.jsx,.ts,.tsx src && echo 'Lint complete.'",
     "preversion": "npm run lint",
-    "release": "npm version patch",
     "postversion": "git push --follow-tags"
   },
   "engines": {
