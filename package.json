@@ -18,8 +18,7 @@
     "install": "npm run build && npm run link",
     "test": "jest --no-watchman --config jest.config.json",
     "lint": "eslint --fix --ext .mjs,.js,.jsx,.ts,.tsx src && echo 'Lint complete.'",
-    "precommit": "npm run lint && npm run test",
-    "preversion": "npm run precommit",
+    "preversion": "npm run lint",
     "release": "npm version patch",
     "postversion": "git push --follow-tags"
   },
